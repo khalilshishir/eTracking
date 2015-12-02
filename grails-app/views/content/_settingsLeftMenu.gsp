@@ -167,6 +167,48 @@
 
                 </ul>
             </li>
+         <li class="nav-has-child-level">
+                <a href="#"><i class="fa fa-users"></i> <span class="nav-label">Issue Mgt</span><span
+                        class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <sec:access controller="issueAreaCategory" action="create">
+                        <li class="${params.controller == 'issueAreaCategory' && params.action == 'create' ||params.controller == 'issueAreaCategory' && params.action == 'index'|| params.controller == 'issueAreaCategory' && params.action == 'show'|| params.controller == 'issueAreaCategory' && params.action == 'edit' ? 'active' : ''}">
+                            <a href="${g.createLink(controller: 'issueAreaCategory', action: 'create')}"><i class="fa fa-user"></i>Area Category</a>
+                        </li>
+                    </sec:access>
+                    <sec:access controller="issueArea" action="create">
+                        <li class="${params.controller == 'issueArea' && params.action == 'create' ||params.controller == 'issueArea' && params.action == 'index'|| params.controller == 'issueArea' && params.action == 'show'|| params.controller == 'issueArea' && params.action == 'edit' ? 'active' : ''}">
+                            <a href="${g.createLink(controller: 'issueArea', action: 'create')}"><i class="fa fa-user"></i>Issue Area</a>
+                        </li>
+                    </sec:access>
+                    <sec:access controller="severityMaster" action="create">
+                        <li class="${params.controller == 'severityMaster' && params.action == 'create' ||params.controller == 'severityMaster' && params.action == 'index'|| params.controller == 'severityMaster' && params.action == 'show'|| params.controller == 'severityMaster' && params.action == 'edit' ? 'active' : ''}">
+                            <a href="${g.createLink(controller: 'severityMaster', action: 'create')}"><i class="fa fa-user"></i>Severity</a>
+                        </li>
+                    </sec:access>
+                </ul>
+            </li>
+        <li class="nav-has-child-level">
+                <a href="#"><i class="fa fa-users"></i> <span class="nav-label">Employee Mgt</span><span
+                        class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <sec:access controller="department" action="create">
+                        <li class="${params.controller == 'department' && params.action == 'create' ||params.controller == 'department' && params.action == 'index'|| params.controller == 'department' && params.action == 'show'|| params.controller == 'department' && params.action == 'edit' ? 'active' : ''}">
+                            <a href="${g.createLink(controller: 'department', action: 'create')}"><i class="fa fa-user"></i>Department</a>
+                        </li>
+                    </sec:access>
+                    <sec:access controller="designation" action="create">
+                        <li class="${params.controller == 'designation' && params.action == 'create' ||params.controller == 'designation' && params.action == 'index'|| params.controller == 'designation' && params.action == 'show'|| params.controller == 'designation' && params.action == 'edit' ? 'active' : ''}">
+                            <a href="${g.createLink(controller: 'designation', action: 'create')}"><i class="fa fa-user"></i>Designation</a>
+                        </li>
+                    </sec:access>
+                    <sec:access controller="employee" action="create">
+                        <li class="${params.controller == 'employee' && params.action == 'create' ||params.controller == 'employee' && params.action == 'index'|| params.controller == 'employee' && params.action == 'show'|| params.controller == 'employee' && params.action == 'edit' ? 'active' : ''}">
+                            <a href="${g.createLink(controller: 'employee', action: 'create')}"><i class="fa fa-user"></i>Employee</a>
+                        </li>
+                    </sec:access>
+                </ul>
+            </li>
         </ul>
 
     </div>
